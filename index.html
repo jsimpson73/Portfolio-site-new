@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="John Simpson">
+  <title>John Simpson | Portfolio</title>
+  <meta name="description" content="John Simpson — Developer, Entertainer, and Quality Assurance professional. Explore experience across multiple disciplines.">
+  <meta name="theme-color" content="#0d1117">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="images/JSfavicon.png" type="image/x-icon">
+
+  <!-- Font Awesome (self-hosted) -->
+  <link rel="stylesheet" href="fonts/fa-css/all.min.css">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+
+  <!-- Scroll Progress -->
+  <div class="scroll-progress"></div>
+
+  <!-- ══ HEADER ══ -->
+  <header class="header" id="header">
+    <nav class="navbar">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-dot"></span>
+        John <span>Simpson</span>
+      </a>
+      <ul class="nav-menu">
+        <li><a href="#home"     class="nav-link active">Home</a></li>
+        <li><a href="#about"    class="nav-link">About</a></li>
+        <li><a href="#explore"  class="nav-link">Explore</a></li>
+        <li><a href="#contact"  class="nav-link">Contact</a></li>
+      </ul>
+      <button class="hamburger" aria-label="Toggle menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- ══ HERO ══ -->
+  <section class="hero" id="home">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-bg-glow glow-1"></div>
+    <div class="hero-bg-glow glow-2"></div>
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-eyebrow">Welcome to my portfolio</div>
+        <h1 class="hero-title">
+          John <span class="name-highlight">Simpson</span>
+        </h1>
+        <p class="hero-subtitle">
+          Developer &bull; Entertainer &bull; Quality Assurance Professional<br>
+          <span class="typewriter-text" id="hero-typewriter"></span>
+        </p>
+        <div class="hero-cta">
+          <a href="#explore" class="btn btn-primary">
+            <i class="fas fa-compass"></i> Explore My Work
+          </a>
+          <a href="#contact" class="btn btn-outline">
+            <i class="fas fa-envelope"></i> Get In Touch
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll-indicator">
+      <span>Scroll</span>
+      <i class="fas fa-chevron-down"></i>
+    </div>
+  </section>
+
+  <!-- ══ ABOUT SNIPPET ══ -->
+  <section class="about-snippet section bg-secondary" id="about">
+    <div class="container">
+      <div class="about-inner">
+        <div class="about-img-wrap reveal-left">
+          <img src="images/OfficeHeadshot.png" alt="John Simpson headshot" class="about-img">
+        </div>
+        <div class="about-text-wrap reveal-right">
+          <div class="section-eyebrow">About Me</div>
+          <h2>Passionate Builder.<br>Creative Performer.</h2>
+          <p>I'm a creative web developer, software developer, and quality assurance professional with a deep passion for technology. Whether I'm writing clean, maintainable code, performing a live show, or hosting a packed karaoke night, I bring the same energy: focused, skilled, and all in.</p>
+          <p>My background spans frontend and backend development, automated and manual QA testing, and over two decades in entertainment — from hosting karaoke shows to wedding DJing and writing lyrics for my own songs.</p>
+          <div class="about-tags">
+            <span class="skill-tag"><i class="fas fa-code"></i> HTML / CSS / JS</span>
+            <span class="skill-tag"><i class="fas fa-database"></i> SQL / C#</span>
+            <span class="skill-tag"><i class="fab fa-react"></i> React / Vue</span>
+            <span class="skill-tag"><i class="fas fa-vial"></i> QA Testing</span>
+            <span class="skill-tag"><i class="fas fa-vial"></i> Karaoke Hosting</span>
+            <span class="skill-tag"><i class="fas fa-microphone"></i> Live Performer</span>
+            <span class="skill-tag"><i class="fas fa-headphones"></i> Wedding DJ</span>
+            <span class="skill-tag"><i class="fas fa-vial"></i> DJ'ing Private Parties</span>
+          </div>
+          <a href="background.html" class="btn btn-outline" style="margin-top:2rem;">
+            <i class="fas fa-user"></i> Full Background
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ EXPLORE / NAV CARDS ══ -->
+  <section class="explore-section section" id="explore">
+    <div class="container">
+      <h2 class="section-title reveal">Explore My <span class="highlight">Specialties</span></h2>
+      <p class="section-sub reveal">Select a specialty below to dive into detailed experience, projects, and a tailored resume.</p>
+
+      <div class="nav-cards-grid">
+
+        <!-- Card 1: Web Developer -->
+        <a href="webdev.html" class="nav-card delay-3 reveal" style="--card-accent: linear-gradient(90deg, #10b981, #00d4ff);">
+          <div class="nav-card-icon" style="background: rgba(16,185,129,0.12); color: #10b981;">
+            <i class="fas fa-globe"></i>
+          </div>
+          <h3>Web Developer</h3>
+          <p>Frontend & full-stack web projects — HTML, CSS, JavaScript, React, responsive design.</p>
+          <span class="card-arrow"><i class="fas fa-arrow-right"></i></span>
+        </a>
+
+        <!-- Card 2: Software Developer -->
+        <a href="softwaredev.html" class="nav-card delay-4 reveal" style="--card-accent: linear-gradient(90deg, #7c3aed, #ec4899);">
+          <div class="nav-card-icon" style="background: rgba(124,58,237,0.12); color: #7c3aed;">
+            <i class="fas fa-laptop-code"></i>
+          </div>
+          <h3>Software Developer</h3>
+          <p>Application development, C#, Python, SQL — backend logic and software engineering projects.</p>
+          <span class="card-arrow"><i class="fas fa-arrow-right"></i></span>
+        </a>
+
+        <!-- Card 3: QA / Software Tester -->
+        <a href="qa.html" class="nav-card delay-5 reveal" style="--card-accent: linear-gradient(90deg, #ef4444, #f59e0b);">
+          <div class="nav-card-icon" style="background: rgba(239,68,68,0.12); color: #ef4444;">
+            <i class="fas fa-vial"></i>
+          </div>
+          <h3>Quality Assurance</h3>
+          <p>Software testing methodologies, test planning, automation concepts, and QA best practices.</p>
+          <span class="card-arrow"><i class="fas fa-arrow-right"></i></span>
+        </a>
+
+        <!-- Card 4: General Background -->
+        <a href="background.html" class="nav-card delay-1 reveal" style="--card-accent: linear-gradient(90deg, #00d4ff, #7c3aed);">
+          <div class="nav-card-icon" style="background: rgba(0,212,255,0.12); color: #00d4ff;">
+            <i class="fas fa-user-tie"></i>
+          </div>
+          <h3>Background & Experience</h3>
+          <p>Work history, education, certifications, and a complete professional overview.</p>
+          <span class="card-arrow"><i class="fas fa-arrow-right"></i></span>
+        </a>
+
+        <!-- Card 5: Entertainer -->
+        <a href="entertainer.html" class="nav-card delay-2 reveal" style="--card-accent: linear-gradient(90deg, #f59e0b, #ec4899);">
+          <div class="nav-card-icon" style="background: rgba(245,158,11,0.12); color: #f59e0b;">
+            <i class="fas fa-music"></i>
+          </div>
+          <h3>Entertainer</h3>
+          <p>Singer & songwriter, wedding DJ, and karaoke KJ — venue schedule, gallery, and music player.</p>
+          <span class="card-arrow"><i class="fas fa-arrow-right"></i></span>
+        </a>
+
+        <!-- Card 6: Leather Crafting -->
+        <a href="leather.html" class="nav-card delay-6 reveal" style="--card-accent: linear-gradient(90deg, #c8793a, #f59e0b); --icon-tint: invert(55%) sepia(60%) saturate(600%) hue-rotate(5deg) brightness(105%);">
+          <div class="nav-card-icon" style="background: rgba(200,121,58,0.12); color: #c8793a;">
+            <img src="images/icon-leather.png" alt="Leather Crafting" class="custom-icon">
+          </div>
+          <h3>Leather Crafting</h3>
+          <p>Handcrafted leather goods — custom belts, wallets, holsters, and bespoke leatherwork projects.</p>
+          <span class="card-arrow"><i class="fas fa-arrow-right"></i></span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ STATS ══ -->
+  <section class="stats-section section bg-secondary">
+    <div class="container">
+      <div class="stats-row">
+        <div class="stat-item reveal">
+          <div class="stat-number">20+</div>
+          <div class="stat-label">Years in Tech</div>
+        </div>
+        <div class="stat-item reveal delay-1">
+          <div class="stat-number">15+</div>
+          <div class="stat-label">Web Projects</div>
+        </div>
+        <div class="stat-item reveal delay-3">
+          <div class="stat-number">3</div>
+          <div class="stat-label">Certifications</div>
+        </div>
+        <div class="stat-item reveal delay-2">
+          <div class="stat-number">20+</div>
+          <div class="stat-label">Years Performing</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ CONTACT ══ -->
+  <section class="contact-section section" id="contact">
+    <div class="container">
+      <h2 class="section-title reveal">Get In <span class="highlight">Touch</span></h2>
+      <div class="contact-grid">
+
+        <!-- Info -->
+        <div class="contact-info-block reveal-left">
+          <h3>Let's Connect</h3>
+          <p style="color:var(--text-secondary);font-size:1.5rem;margin-bottom:var(--space-lg);">Whether you need a developer, a performer, or just want to say hello — I'd love to hear from you.</p>
+
+          <div class="contact-info-item">
+            <div class="contact-info-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div class="contact-info-text">
+              <h4>Location</h4>
+              <p>Sterling, IL 61081</p>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-info-icon"><i class="fas fa-envelope"></i></div>
+            <div class="contact-info-text">
+              <h4>Email</h4>
+              <a href="mailto:john.simpson73@hotmail.com">john.simpson73@hotmail.com</a>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-info-icon"><i class="fas fa-phone"></i></div>
+            <div class="contact-info-text">
+              <h4>Phone</h4>
+              <a href="tel:+13092193875">+1 (309) 219-3875</a>
+            </div>
+          </div>
+
+          <div class="social-row">
+            <a href="https://github.com/jsimpson73" target="_blank" class="social-btn" title="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/john-simpson-25aa7271/" target="_blank" class="social-btn" title="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Form -->
+        <div class="contact-form-block reveal-right">
+          <form id="contact-form" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="cf-name">Your Name</label>
+                <input type="text" id="cf-name" class="form-control" placeholder="John Doe">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="cf-email">Email Address</label>
+                <input type="email" id="cf-email" class="form-control" placeholder="you@example.com">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="cf-subject">Subject</label>
+              <input type="text" id="cf-subject" class="form-control" placeholder="What's this about?">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="cf-message">Message</label>
+              <textarea id="cf-message" class="form-control" placeholder="Tell me more..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary form-submit">
+              <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+            <div class="form-message"></div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ FOOTER ══ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">
+            <span class="logo-dot"></span>
+            John <span>Simpson</span>
+          </a>
+          <p>Developer. Entertainer. Problem Solver. Building things that work, and experiences that resonate.</p>
+          <div class="social-row" style="margin-top:var(--space-md);">
+            <a href="https://github.com/jsimpson73" target="_blank" class="social-btn"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/john-simpson-25aa7271/" target="_blank" class="social-btn"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Specialties</h4>
+          <nav class="footer-links">
+            <a href="background.html"><i class="fas fa-chevron-right"></i> Background</a>
+            <a href="entertainer.html"><i class="fas fa-chevron-right"></i> Entertainer</a>
+            <a href="webdev.html"><i class="fas fa-chevron-right"></i> Web Developer</a>
+            <a href="softwaredev.html"><i class="fas fa-chevron-right"></i> Software Dev</a>
+            <a href="qa.html"><i class="fas fa-chevron-right"></i> Quality Assurance</a>
+          </nav>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <nav class="footer-links">
+            <a href="#home"><i class="fas fa-chevron-right"></i> Home</a>
+            <a href="#about"><i class="fas fa-chevron-right"></i> About</a>
+            <a href="#explore"><i class="fas fa-chevron-right"></i> Explore</a>
+            <a href="#contact"><i class="fas fa-chevron-right"></i> Contact</a>
+          </nav>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <nav class="footer-links">
+            <a href="mailto:john.simpson73@hotmail.com"><i class="fas fa-envelope"></i> Email Me</a>
+            <a href="tel:+13092193875"><i class="fas fa-phone"></i> Call Me</a>
+            <a href="https://github.com/jsimpson73" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+          </nav>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="copyright">&copy; 2025 John Simpson. All Rights Reserved.</p>
+        <p class="copyright">Sterling, IL</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <a href="#" class="back-to-top" title="Back to top"><i class="fas fa-arrow-up"></i></a>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      initTypewriter('#hero-typewriter', [
+        'Crafting responsive web experiences.',
+        'Building robust software solutions.',
+        'Ensuring quality at every step.',
+        'Bringing the house down on stage.',
+        'Hosting unforgettable karaoke nights.'
+      ]);
+    });
+  </script>
+</body>
+</html>
