@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="John Simpson">
+  <title>Leather Crafting | John Simpson</title>
+  <meta name="description" content="John Simpson — Handcrafted leather goods including custom belts, wallets, holsters, and bespoke leatherwork.">
+  <meta name="theme-color" content="#0d1117">
+  <link rel="shortcut icon" href="images/JSfavicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="fonts/fa-css/all.min.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/inner-pages.css">
+  <style>
+    /* ── Leather page extras ── */
+    .leather-about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: var(--space-xl);
+      align-items: center;
+    }
+    .leather-about-img {
+      position: relative;
+    }
+    .leather-about-img img {
+      width: 100%;
+      border-radius: var(--radius-lg);
+      border: 2px solid rgba(200,121,58,0.25);
+      box-shadow: 0 0 40px rgba(200,121,58,0.15);
+      object-fit: cover;
+      aspect-ratio: 1 / 1;
+      background: var(--bg-card);
+    }
+    .leather-about-img-placeholder {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      border-radius: var(--radius-lg);
+      border: 2px solid rgba(200,121,58,0.25);
+      box-shadow: 0 0 40px rgba(200,121,58,0.15);
+      background: var(--bg-card);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1.2rem;
+      color: rgba(200,121,58,0.5);
+      font-size: 1.4rem;
+    }
+    .leather-about-img-placeholder i {
+      font-size: 5rem;
+      color: rgba(200,121,58,0.35);
+    }
+    .leather-about-text h3 {
+      font-size: 2.2rem;
+      color: var(--text-primary);
+      margin-bottom: var(--space-sm);
+    }
+    .leather-about-text p {
+      font-size: 1.55rem;
+      color: var(--text-secondary);
+      line-height: 1.8;
+      margin-bottom: var(--space-md);
+    }
+    .leather-skills-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: var(--space-sm);
+    }
+    .leather-skill-tag {
+      padding: 0.6rem 1.4rem;
+      border-radius: var(--radius-full);
+      background: rgba(200,121,58,0.1);
+      border: 1px solid rgba(200,121,58,0.3);
+      color: #c8793a;
+      font-size: 1.3rem;
+      font-weight: 500;
+    }
+
+    /* ── External links block ── */
+    .external-links-block {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-md);
+      justify-content: center;
+      align-items: center;
+      padding: var(--space-xl);
+      background: var(--bg-card);
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(200,121,58,0.2);
+      box-shadow: 0 0 30px rgba(200,121,58,0.08);
+    }
+    .external-links-block .ext-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1.4rem 2.8rem;
+      border-radius: var(--radius-md);
+      font-size: 1.55rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all var(--transition-fast);
+      letter-spacing: 0.02em;
+    }
+    .ext-btn-business {
+      background: linear-gradient(135deg, #c8793a, #f59e0b);
+      color: #fff;
+      box-shadow: 0 0 20px rgba(200,121,58,0.35);
+    }
+    .ext-btn-business:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 0 35px rgba(200,121,58,0.55);
+    }
+    .ext-btn-facebook {
+      background: #1877f2;
+      color: #fff;
+      box-shadow: 0 0 20px rgba(24,119,242,0.3);
+    }
+    .ext-btn-facebook:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 0 35px rgba(24,119,242,0.5);
+      background: #1565d8;
+    }
+    .ext-btn-etsy {
+      background: #f1641e;
+      color: #fff;
+      box-shadow: 0 0 20px rgba(241,100,30,0.3);
+    }
+    .ext-btn-etsy:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 0 35px rgba(241,100,30,0.5);
+      background: #d9561a;
+    }
+    .ext-links-label {
+      width: 100%;
+      text-align: center;
+      font-size: 1.5rem;
+      color: var(--text-muted);
+      margin-bottom: var(--space-sm);
+    }
+
+    /* ── Gallery ── */
+    .leather-gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.6rem;
+    }
+    .leather-gallery-item {
+      position: relative;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      cursor: pointer;
+      aspect-ratio: 1 / 1;
+      background: var(--bg-card);
+      border: 1px solid rgba(200,121,58,0.15);
+    }
+    .leather-gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+    .leather-gallery-item-placeholder {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      color: rgba(200,121,58,0.4);
+      font-size: 1.3rem;
+    }
+    .leather-gallery-item-placeholder i {
+      font-size: 3rem;
+      color: rgba(200,121,58,0.3);
+    }
+    .leather-gallery-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(200,121,58,0.55);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .leather-gallery-overlay i {
+      font-size: 2.8rem;
+      color: #fff;
+    }
+    .leather-gallery-item:hover img { transform: scale(1.08); }
+    .leather-gallery-item:hover .leather-gallery-overlay { opacity: 1; }
+
+    /* Responsive */
+    @media screen and (max-width: 768px) {
+      .leather-about-grid { grid-template-columns: 1fr; }
+      .leather-gallery-grid { grid-template-columns: repeat(2, 1fr); }
+      .external-links-block { flex-direction: column; }
+      .external-links-block .ext-btn { width: 100%; justify-content: center; }
+    }
+    @media screen and (max-width: 480px) {
+      .leather-gallery-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body class="page-leather">
+
+  <div class="scroll-progress"></div>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <nav class="navbar">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-dot"></span>
+        John <span>Simpson</span>
+      </a>
+      <ul class="nav-menu">
+        <li><a href="index.html"       class="nav-link">Home</a></li>
+        <li><a href="background.html"  class="nav-link">Background</a></li>
+        <li><a href="entertainer.html" class="nav-link">Entertainer</a></li>
+        <li><a href="webdev.html"      class="nav-link">Web Dev</a></li>
+        <li><a href="softwaredev.html" class="nav-link">Software Dev</a></li>
+        <li><a href="qa.html"          class="nav-link">QA</a></li>
+        <li><a href="leather.html"     class="nav-link active">Leather</a></li>
+      </ul>
+      <button class="hamburger" aria-label="Toggle menu">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero bg-page-bg">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-bg-glow page-glow-bg"></div>
+    <div class="page-hero-content">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="sep"><i class="fas fa-chevron-right"></i></span>
+        <span>Leather Crafting</span>
+      </div>
+      <span class="page-hero-icon" style="color:#c8793a;">
+        <img src="images/icon-leather.png" alt="Leather Crafting" style="width:5rem;height:5rem;filter:invert(55%) sepia(60%) saturate(600%) hue-rotate(5deg) brightness(105%);">
+      </span>
+      <h1>Leather <span class="highlight">Crafting</span></h1>
+      <p>Handcrafted leather goods built with quality materials, traditional techniques, and an eye for detail.</p>
+    </div>
+  </section>
+
+  <!-- EXTERNAL LINKS -->
+  <section class="section bg-secondary">
+    <div class="container">
+      <div class="external-links-block reveal">
+        <p class="ext-links-label"><i class="fas fa-external-link-alt" style="margin-right:.6rem;"></i>Find Simpson Leather Craft online</p>
+        <a href="https://simpsonleathercraft.com" target="_blank" class="ext-btn ext-btn-business">
+          <i class="fas fa-store"></i> Simpson Leather Craft
+        </a>
+        <a href="https://www.facebook.com/simpsonleathercraft" target="_blank" class="ext-btn ext-btn-facebook">
+          <i class="fab fa-facebook-f"></i> Facebook Page
+        </a>
+        <a href="https://www.etsy.com/shop/SimpsonLeatherCraft" target="_blank" class="ext-btn ext-btn-etsy">
+          <i class="fab fa-etsy"></i> Etsy Shop
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="container">
+      <h2 class="section-title reveal">About <span class="highlight">Simpson Leather Craft</span></h2>
+      <div class="leather-about-grid">
+
+        <div class="leather-about-img reveal reveal-left">
+          <img src="./images/SLClogoWText.png">
+        </div>
+
+        <div class="leather-about-text reveal reveal-right">
+          <h3>Crafted by Hand. Built to Last.</h3>
+          <p>
+            Simpson Leather Craft is a passion-driven leather goods business founded on a love for traditional craftsmanship and quality materials. Every piece is cut, stitched, and finished by hand — no shortcuts, no mass production.
+          </p>
+          <p>
+            From everyday carry items like wallets and key fobs to fully custom holsters, belts, and personalized gifts, each product is designed to develop a rich patina over time and become a cherished, one-of-a-kind piece.
+          </p>
+          <p>
+            Whether you're looking for something off the shelf from the Etsy shop or a fully custom commission, the same care and attention to detail goes into every single item.
+          </p>
+          <div class="leather-skills-row">
+            <span class="leather-skill-tag">Hand Stitching</span>
+            <span class="leather-skill-tag">Belt Making</span>
+            <span class="leather-skill-tag">Wallets</span>
+            <span class="leather-skill-tag">Holsters</span>
+            <span class="leather-skill-tag">Custom Orders</span>
+            <span class="leather-skill-tag">Tooling & Carving</span>
+            <span class="leather-skill-tag">Dyeing & Finishing</span>
+            <span class="leather-skill-tag">Key Fobs</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="section bg-secondary" id="gallery">
+    <div class="container">
+      <h2 class="section-title reveal">Photo <span class="highlight">Gallery</span></h2>
+      <p style="text-align:center;color:var(--text-muted);font-size:1.5rem;margin-bottom:var(--space-xl);" class="reveal">
+        A look at some recent work — click any photo to view full size.
+      </p>
+
+      <div class="leather-gallery-grid reveal">
+
+        <div class="leather-gallery-item" data-caption="Custom hand-stitched wallet">
+          <div class="leather-gallery-item-placeholder">
+            <i class="fas fa-camera"></i>
+            <span>Add photo</span>
+          </div>
+          <div class="leather-gallery-overlay"><i class="fas fa-expand"></i></div>
+        </div>
+
+        <div class="leather-gallery-item" data-caption="Hand-tooled leather belt">
+          <div class="leather-gallery-item-placeholder">
+            <i class="fas fa-camera"></i>
+            <span>Add photo</span>
+          </div>
+          <div class="leather-gallery-overlay"><i class="fas fa-expand"></i></div>
+        </div>
+
+        <div class="leather-gallery-item" data-caption="Custom holster build">
+          <div class="leather-gallery-item-placeholder">
+            <i class="fas fa-camera"></i>
+            <span>Add photo</span>
+          </div>
+          <div class="leather-gallery-overlay"><i class="fas fa-expand"></i></div>
+        </div>
+
+        <div class="leather-gallery-item" data-caption="Bifold wallet with card slots">
+          <div class="leather-gallery-item-placeholder">
+            <i class="fas fa-camera"></i>
+            <span>Add photo</span>
+          </div>
+          <div class="leather-gallery-overlay"><i class="fas fa-expand"></i></div>
+        </div>
+
+        <div class="leather-gallery-item" data-caption="Personalized key fob set">
+          <div class="leather-gallery-item-placeholder">
+            <i class="fas fa-camera"></i>
+            <span>Add photo</span>
+          </div>
+          <div class="leather-gallery-overlay"><i class="fas fa-expand"></i></div>
+        </div>
+
+        <div class="leather-gallery-item" data-caption="Tooled and dyed leather work">
+          <div class="leather-gallery-item-placeholder">
+            <i class="fas fa-camera"></i>
+            <span>Add photo</span>
+          </div>
+          <div class="leather-gallery-overlay"><i class="fas fa-expand"></i></div>
+        </div>
+
+        <div class="leather-gallery-item" data-caption="Custom order — engraved belt buckle combo">
+          <div class="leather-gallery-item-placeholder">
+            <i class="fas fa-camera"></i>
+            <span>Add photo</span>
+          </div>
+          <div class="leather-gallery-overlay"><i class="fas fa-expand"></i></div>
+        </div>
+
+        <div class="leather-gallery-item" data-caption="Work in progress — stitching detail">
+          <div class="leather-gallery-item-placeholder">
+            <i class="fas fa-camera"></i>
+            <span>Add photo</span>
+          </div>
+          <div class="leather-gallery-overlay"><i class="fas fa-expand"></i></div>
+        </div>
+
+        <div class="leather-gallery-item" data-caption="Finished pieces ready to ship">
+          <div class="leather-gallery-item-placeholder">
+            <i class="fas fa-camera"></i>
+            <span>Add photo</span>
+          </div>
+          <div class="leather-gallery-overlay"><i class="fas fa-expand"></i></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- LIGHTBOX -->
+  <div id="lightbox">
+    <div class="lb-inner">
+      <button class="lb-prev"><i class="fas fa-chevron-left"></i></button>
+      <div class="lb-img-wrap">
+        <button class="lb-close"><i class="fas fa-times"></i></button>
+        <img class="lb-img" src="" alt="">
+      </div>
+      <button class="lb-next"><i class="fas fa-chevron-right"></i></button>
+    </div>
+    <div class="lb-footer">
+      <p class="lb-caption"></p>
+      <p class="lb-counter"></p>
+    </div>
+  </div>
+
+  <!-- CUSTOM ORDER CTA -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="resume-cta-block reveal" style="border-color:rgba(200,121,58,0.4);">
+        <div class="cta-text">
+          <h3><i class="fas fa-pencil-ruler" style="color:#c8793a;margin-right:.8rem;"></i>Interested in a Custom Order?</h3>
+          <p>Have something specific in mind? Reach out directly or visit the business site to get started on a custom piece.</p>
+        </div>
+        <a href="https://simpsonleathercraft.com" target="_blank" class="btn btn-primary" style="background:linear-gradient(135deg,#c8793a,#f59e0b);box-shadow:0 0 20px rgba(200,121,58,0.3);">
+          <i class="fas fa-store"></i> Visit the Shop
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo" style="margin-bottom:1.6rem;display:inline-flex;">
+            <span class="logo-dot"></span>
+            John <span>Simpson</span>
+          </a>
+          <p>Developer. Entertainer. Craftsman. Problem Solver.</p>
+          <div class="footer-social">
+            <a href="https://github.com/jsimpson73" target="_blank" class="social-btn"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/john-simpson-25aa7271/" target="_blank" class="social-btn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.facebook.com/simpsonleathercraft" target="_blank" class="social-btn"><i class="fab fa-facebook-f"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Specialties</h4>
+          <ul class="footer-links">
+            <li><a href="background.html">Background</a></li>
+            <li><a href="entertainer.html">Entertainer</a></li>
+            <li><a href="webdev.html">Web Developer</a></li>
+            <li><a href="softwaredev.html">Software Dev</a></li>
+            <li><a href="qa.html">Quality Assurance</a></li>
+            <li><a href="leather.html">Leather Crafting</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Leather Craft</h4>
+          <ul class="footer-links">
+            <li><a href="https://simpsonleathercraft.com" target="_blank"><i class="fas fa-store" style="margin-right:.6rem;"></i>Business Site</a></li>
+            <li><a href="https://www.facebook.com/simpsonleathercraft" target="_blank"><i class="fab fa-facebook-f" style="margin-right:.6rem;"></i>Facebook</a></li>
+            <li><a href="https://www.etsy.com/shop/SimpsonLeatherCraft" target="_blank"><i class="fab fa-etsy" style="margin-right:.6rem;"></i>Etsy Shop</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul class="footer-links">
+            <li><a href="mailto:john.simpson73@hotmail.com"><i class="fas fa-envelope" style="margin-right:.6rem;"></i>Email Me</a></li>
+            <li><a href="tel:+13092193875"><i class="fas fa-phone" style="margin-right:.6rem;"></i>Call Me</a></li>
+            <li><a href="https://github.com/jsimpson73" target="_blank"><i class="fab fa-github" style="margin-right:.6rem;"></i>GitHub</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="copyright">&copy; <span id="footer-year"></span> John Simpson. All rights reserved.</p>
+        <a href="index.html" class="footer-back-home"><i class="fas fa-arrow-left"></i> Back to Home</a>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Footer year
+    document.getElementById('footer-year').textContent = new Date().getFullYear();
+
+    // Lightbox for leather gallery
+    (function() {
+      const items = document.querySelectorAll('.leather-gallery-item');
+      const lb = document.getElementById('lightbox');
+      const lbImg = lb.querySelector('.lb-img');
+      const lbCaption = lb.querySelector('.lb-caption');
+      const lbCounter = lb.querySelector('.lb-counter');
+      const lbClose = lb.querySelector('.lb-close');
+      const lbPrev = lb.querySelector('.lb-prev');
+      const lbNext = lb.querySelector('.lb-next');
+      let current = 0;
+
+      // Only include items that have real images
+      function getImgItems() {
+        return Array.from(items).filter(item => item.querySelector('img'));
+      }
+
+      function openLightbox(idx) {
+        const imgItems = getImgItems();
+        if (!imgItems.length) return;
+        current = idx;
+        const img = imgItems[current].querySelector('img');
+        const caption = imgItems[current].dataset.caption || '';
+        lbImg.src = img ? img.src : '';
+        lbCaption.textContent = caption;
+        lbCounter.textContent = `${current + 1} / ${imgItems.length}`;
+        lb.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeLightbox() {
+        lb.classList.remove('active');
+        document.body.style.overflow = '';
+        lbImg.src = '';
+      }
+
+      function showPrev() {
+        const imgItems = getImgItems();
+        current = (current - 1 + imgItems.length) % imgItems.length;
+        openLightbox(current);
+      }
+
+      function showNext() {
+        const imgItems = getImgItems();
+        current = (current + 1) % imgItems.length;
+        openLightbox(current);
+      }
+
+      items.forEach((item, idx) => {
+        item.addEventListener('click', () => {
+          const imgItems = getImgItems();
+          const realIdx = imgItems.indexOf(item);
+          if (realIdx !== -1) openLightbox(realIdx);
+        });
+      });
+
+      lbClose.addEventListener('click', closeLightbox);
+      lb.addEventListener('click', (e) => { if (e.target === lb) closeLightbox(); });
+      lbPrev.addEventListener('click', showPrev);
+      lbNext.addEventListener('click', showNext);
+
+      document.addEventListener('keydown', (e) => {
+        if (!lb.classList.contains('active')) return;
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowLeft') showPrev();
+        if (e.key === 'ArrowRight') showNext();
+      });
+    })();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,123 @@
+/* ============================================================
+   VARIABLES.CSS — Design tokens for dark dynamic theme
+   ============================================================ */
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Open Sans';
+  src: url('../fonts/OpenSans-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Open Sans';
+  src: url('../fonts/OpenSans-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* ── Core Palette ── */
+  --bg-primary:       #0d1117;
+  --bg-secondary:     #161b22;
+  --bg-card:          #1c2230;
+  --bg-card-hover:    #232d3f;
+  --bg-overlay:       rgba(13, 17, 23, 0.92);
+
+  /* ── Accent Colors ── */
+  --accent-cyan:      #00d4ff;
+  --accent-purple:    #7c3aed;
+  --accent-gold:      #f59e0b;
+  --accent-green:     #10b981;
+  --accent-red:       #ef4444;
+  --accent-pink:      #ec4899;
+
+  /* ── Page-specific accents (overridden per page) ── */
+  --accent-primary:   #00d4ff;
+  --accent-secondary: #7c3aed;
+
+  /* ── Text ── */
+  --text-primary:     #f0f6fc;
+  --text-secondary:   #8b949e;
+  --text-muted:       #484f58;
+  --text-inverse:     #0d1117;
+
+  /* ── Borders ── */
+  --border-color:     rgba(255, 255, 255, 0.08);
+  --border-accent:    rgba(0, 212, 255, 0.3);
+
+  /* ── Glow Effects ── */
+  --glow-cyan:        0 0 20px rgba(0, 212, 255, 0.35), 0 0 60px rgba(0, 212, 255, 0.1);
+  --glow-purple:      0 0 20px rgba(124, 58, 237, 0.35), 0 0 60px rgba(124, 58, 237, 0.1);
+  --glow-gold:        0 0 20px rgba(245, 158, 11, 0.35), 0 0 60px rgba(245, 158, 11, 0.1);
+
+  /* ── Shadows ── */
+  --shadow-sm:        0 2px 8px rgba(0,0,0,0.4);
+  --shadow-md:        0 4px 20px rgba(0,0,0,0.5);
+  --shadow-lg:        0 8px 40px rgba(0,0,0,0.6);
+  --shadow-card:      0 4px 24px rgba(0,0,0,0.5), 0 1px 0 rgba(255,255,255,0.05) inset;
+
+  /* ── Typography ── */
+  --font-heading:     'Montserrat', sans-serif;
+  --font-body:        'Open Sans', sans-serif;
+  --font-mono:        'Courier New', Courier, monospace;
+
+  /* ── Spacing ── */
+  --space-xs:  0.4rem;
+  --space-sm:  0.8rem;
+  --space-md:  1.6rem;
+  --space-lg:  3.2rem;
+  --space-xl:  6.4rem;
+  --space-2xl: 10rem;
+
+  /* ── Border Radius ── */
+  --radius-sm:   4px;
+  --radius-md:   8px;
+  --radius-lg:   16px;
+  --radius-xl:   24px;
+  --radius-full: 9999px;
+
+  /* ── Transitions ── */
+  --transition-fast:   0.2s ease;
+  --transition-mid:    0.35s ease;
+  --transition-slow:   0.6s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* ── Layout ── */
+  --container-max: 1200px;
+  --nav-height:    70px;
+
+  /* ── Gradients ── */
+  --gradient-hero:    linear-gradient(135deg, #0d1117 0%, #161b22 50%, #1a1f2e 100%);
+  --gradient-card:    linear-gradient(145deg, #1c2230 0%, #161b22 100%);
+  --gradient-accent:  linear-gradient(135deg, var(--accent-cyan) 0%, var(--accent-purple) 100%);
+  --gradient-gold:    linear-gradient(135deg, var(--accent-gold) 0%, #f97316 100%);
+}

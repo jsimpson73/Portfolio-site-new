@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="John Simpson">
+  <title>Entertainer | John Simpson</title>
+  <meta name="description" content="John Simpson — Singer/Songwriter, Wedding DJ, and Karaoke KJ. Venue schedule, photo gallery, and music player.">
+  <meta name="theme-color" content="#0d1117">
+  <link rel="shortcut icon" href="images/JSfavicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="fonts/fa-css/all.min.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/inner-pages.css">
+</head>
+<body class="page-entertainer">
+
+  <div class="scroll-progress"></div>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <nav class="navbar">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-dot"></span>
+        John <span>Simpson</span>
+      </a>
+      <ul class="nav-menu">
+        <li><a href="index.html"       class="nav-link">Home</a></li>
+        <li><a href="background.html"  class="nav-link">Background</a></li>
+        <li><a href="entertainer.html" class="nav-link active">Entertainer</a></li>
+        <li><a href="webdev.html"      class="nav-link">Web Dev</a></li>
+        <li><a href="softwaredev.html" class="nav-link">Software Dev</a></li>
+        <li><a href="qa.html"          class="nav-link">QA</a></li>
+      </ul>
+      <button class="hamburger" aria-label="Toggle menu">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero bg-page-bg">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-bg-glow page-glow-bg"></div>
+    <div class="page-hero-content">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="sep"><i class="fas fa-chevron-right"></i></span>
+        <span>Entertainer</span>
+      </div>
+      <span class="page-hero-icon" style="color:#f59e0b;"><i class="fas fa-music"></i></span>
+      <h1>The <span class="highlight">Entertainer</span></h1>
+      <p>Singer & Songwriter &bull; Wedding DJ &bull; Karaoke KJ — bringing energy and great music to every event.</p>
+    </div>
+  </section>
+
+  <!-- INTRO -->
+  <section class="section" id="intro">
+    <div class="container">
+      <div class="entertainer-intro">
+        <div class="reveal-left">
+          <div class="section-eyebrow" style="color:#f59e0b;">About the Act</div>
+          <h2>Music, Performance & <span class="highlight">Pure Energy</span></h2>
+          <p>With over two decades of karaoke show hosting and wedding  DJ'ing experience, John brings a unique blend of crowd-reading DJ skills and the rare ability to turn a quiet room into an unforgettable party. Whether it's a romantic first dance at a wedding reception, a rowdy bar karaoke night, or an original set at a summer festival — John delivers every time.</p>
+          <p>As a karaoke KJ, John specializes in creating inclusive shows where every singer feels like a star. His wedding DJ services feature MC skills and custom playlists built around the couple's vision.</p>
+          <div class="skill-tags" style="margin-top:var(--space-md);">
+            <span class="skill-tag" style="border-color:rgba(245,158,11,0.3);color:#f59e0b;">Original Songwriting</span>
+            <span class="skill-tag" style="border-color:rgba(245,158,11,0.3);color:#f59e0b;">Covers</span>
+            <span class="skill-tag" style="border-color:rgba(245,158,11,0.3);color:#f59e0b;">Vocals</span>
+            <span class="skill-tag" style="border-color:rgba(245,158,11,0.3);color:#f59e0b;">KJ Hosting</span>
+            <span class="skill-tag" style="border-color:rgba(245,158,11,0.3);color:#f59e0b;">MC / Emcee</span>
+          </div>
+        </div>
+        <div class="entertainer-roles reveal-right">
+          <div class="role-card">
+            <div class="role-card-icon"><i class="fas fa-guitar"></i></div>
+            <div class="role-card-text">
+              <h4>Singer / Songwriter</h4>
+              <p>Original music and covers — acoustic sets, festival performances, and private events.</p>
+            </div>
+          </div>
+          <div class="role-card">
+            <div class="role-card-icon"><i class="fas fa-compact-disc"></i></div>
+            <div class="role-card-text">
+              <h4>Wedding DJ</h4>
+              <p>Custom ceremony-to-reception playlists, seamless mixing, MC services for your perfect day.</p>
+            </div>
+          </div>
+          <div class="role-card">
+            <div class="role-card-icon"><i class="fas fa-microphone-alt"></i></div>
+            <div class="role-card-text">
+              <h4>Karaoke KJ</h4>
+              <p>High-energy karaoke hosting with a massive library. Resident KJ at Champs on Light Street & Brink's, Sterling, IL.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section\
+  <!-- VENUE SCHEDULE -->
+  <section class="section bg-secondary" id="schedule">
+    <div class="container">
+      <h2 class="section-title reveal">Upcoming <span class="highlight">Schedule</span></h2>
+      <p class="reveal" style="text-align:center;color:var(--text-secondary);font-size:1.5rem;margin-bottom:var(--space-lg);">
+        <i class="fas fa-calendar-alt" style="color:#f59e0b;margin-right:.6rem;"></i>
+        All upcoming shows and events. Filter by type below.
+      </p>
+      <div class="schedule-wrapper reveal">
+        <div class="schedule-filters">
+          <button class="schedule-filter-btn active" data-filter="all">All Events</button>
+          <button class="schedule-filter-btn" data-filter="Karaoke KJ">Karaoke KJ</button>
+          <button class="schedule-filter-btn" data-filter="Wedding DJ">Wedding DJ</button>
+          <button class="schedule-filter-btn" data-filter="Live Performance">Live Performance</button>
+          <button class="schedule-filter-btn" data-filter="past">Past Events</button>
+        </div>
+        <div class="schedule-table-wrap">
+          <table class="schedule-table">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Venue / Location</th>
+                <th>Time</th>
+                <th>Type</th>
+                <th>Notes</th>
+              </tr>
+            </thead>
+            <tbody id="schedule-tbody">
+              <!-- Populated by entertainer.js -->
+            </tbody>
+          </table>
+          <div id="schedule-empty">
+            <i class="fas fa-calendar-xmark" style="font-size:3rem;margin-bottom:var(--space-md);color:var(--text-muted);display:block;"></i>
+            No events found for this filter.
+          </div>
+        </div>
+      </div>
+      <p class="reveal" style="text-align:center;margin-top:var(--space-md);font-size:1.4rem;color:var(--text-muted);">
+        To book John for your event, <a href="#contact" style="color:#f59e0b;">contact him below</a>.
+      </p>
+    </div>
+  </section>
+
+  <!-- PHOTO GALLERY -->
+  <section class="section" id="gallery">
+    <div class="container">
+      <h2 class="section-title reveal">Photo <span class="highlight">Gallery</span></h2>
+      <p class="reveal" style="text-align:center;color:var(--text-secondary);font-size:1.5rem;margin-bottom:var(--space-xl);">Click any photo to view full size. Use arrow keys to navigate.</p>
+
+      <div class="gallery-grid reveal">
+        <div class="gallery-item" data-caption="Karaoke Night at Champ's on Light Street">
+          <img src="images/HeadshotwCowboyhat.png" alt="John Simpson performing">
+          <div class="gallery-item-overlay"><i class="fas fa-expand"></i></div>
+        </div>
+        <div class="gallery-item" data-caption="Live acoustic performance">
+          <img src="images/Singing.png" alt="Live performance">
+          <div class="gallery-item-overlay"><i class="fas fa-expand"></i></div>
+        </div>
+        <div class="gallery-item" data-caption="Wedding DJ setup">
+          <img src="images/Sip a Little Whiskey.jpeg" alt="Event setup">
+          <div class="gallery-item-overlay"><i class="fas fa-expand"></i></div>
+        </div>
+        <div class="gallery-item" data-caption="Summer festival performance">
+          <img src="images/MiEsposaYFamiliaThumbnail.png" alt="Festival stage">
+          <div class="gallery-item-overlay"><i class="fas fa-expand"></i></div>
+        </div>
+        <div class="gallery-item" data-caption="Karaoke crowd">
+          <img src="images/FNBthumbnail.png" alt="Karaoke crowd">
+          <div class="gallery-item-overlay"><i class="fas fa-expand"></i></div>
+        </div>
+        <div class="gallery-item" data-caption="John performing originals">
+          <img src="images/SipaLittleWhiskeyThumbnail.png" alt="Original music set">
+          <div class="gallery-item-overlay"><i class="fas fa-expand"></i></div>
+        </div>
+        <div class="gallery-item" data-caption="Wedding reception DJ set">
+          <img src="images/TequilaTonightThumbnail.png" alt="Wedding DJ">
+          <div class="gallery-item-overlay"><i class="fas fa-expand"></i></div>
+        </div>
+        <div class="gallery-item" data-caption="Venue setup and sound check">
+          <img src="images/WhereDidTheTimeGoThumbnail.png" alt="Venue">
+          <div class="gallery-item-overlay"><i class="fas fa-expand"></i></div>
+        </div>
+      </div>
+
+      <p class="reveal" style="text-align:center;margin-top:var(--space-lg);font-size:1.4rem;color:var(--text-muted);">
+        <i class="fas fa-info-circle" style="margin-right:.5rem;"></i>
+        Replace placeholder images with actual performance photos in the <code>images/</code> folder.
+      </p>
+    </div>
+  </section>
+
+  <!-- LIGHTBOX -->
+  <div id="lightbox">
+    <div class="lb-inner">
+      <button class="lb-prev"><i class="fas fa-chevron-left"></i></button>
+      <div style="position:relative;">
+        <button class="lb-close"><i class="fas fa-times"></i></button>
+        <img class="lb-img" src="" alt="">
+      </div>
+      <button class="lb-next"><i class="fas fa-chevron-right"></i></button>
+    </div>
+    <div class="lb-footer">
+      <p class="lb-caption"></p>
+      <p class="lb-counter"></p>
+    </div>
+  </div>
+
+  <!-- MEDIA PLAYER -->
+  <section class="section bg-secondary" id="music">
+    <div class="container">
+      <h2 class="section-title reveal">Music <span class="highlight">Player</span></h2>
+      <p class="reveal" style="text-align:center;color:var(--text-secondary);font-size:1.5rem;margin-bottom:var(--space-xl);">
+        Listen to original tracks and recordings. Add your MP3 or WAV files to the <code>audio/</code> folder and update the playlist below.
+      </p>
+
+      <div id="media-player" class="reveal">
+        <div class="player-header">
+          <h4><i class="fas fa-headphones"></i> Now Playing</h4>
+          <span class="badge" style="background:rgba(245,158,11,0.15);color:#f59e0b;border-color:rgba(245,158,11,0.3);">John Simpson</span>
+        </div>
+
+        <div class="player-layout">
+          <!-- Player body -->
+          <div class="player-body">
+            <!-- Visualizer -->
+            <div class="mp-visualizer"></div>
+
+            <!-- Track info -->
+            <div class="mp-track-info">
+              <div class="mp-thumb-placeholder">
+                <i class="fas fa-music"></i>
+              </div>
+              <div>
+                <div class="mp-track-title">Select a Track</div>
+                <div class="mp-track-artist">John Simpson</div>
+              </div>
+            </div>
+
+            <!-- Progress -->
+            <div class="mp-progress-wrap">
+              <input type="range" class="mp-seek" min="0" max="100" value="0" step="0.1">
+              <div class="mp-progress-track">
+                <div class="mp-progress-fill"></div>
+              </div>
+            </div>
+            <div class="mp-time-row">
+              <span class="mp-time-current">0:00</span>
+              <span class="mp-time-duration">0:00</span>
+            </div>
+
+            <!-- Controls -->
+            <div class="player-controls">
+              <button class="mp-ctrl-btn mp-prev" title="Previous"><i class="fas fa-backward-step"></i></button>
+              <button class="mp-ctrl-btn mp-play" title="Play/Pause"><i class="fas fa-play"></i></button>
+              <button class="mp-ctrl-btn mp-next" title="Next"><i class="fas fa-forward-step"></i></button>
+            </div>
+
+            <!-- Volume -->
+            <div class="player-volume">
+              <button class="mp-mute" title="Mute"><i class="fas fa-volume-up"></i></button>
+              <input type="range" class="mp-volume" min="0" max="100" value="80" step="1">
+            </div>
+          </div>
+
+          <!-- Playlist -->
+          <div class="player-playlist">
+            <div class="playlist-header"><i class="fas fa-list" style="margin-right:.6rem;"></i>Playlist</div>
+
+            <!-- Add data-src="audio/filename.mp3" to point to real files -->
+            <div class="playlist-item"
+              data-src="audio/Sip a Little Whiskey.mp3"
+              data-title="Sip a Little Whiskey"
+              data-artist="John Simpson"
+              data-thumb="images/Sip a Little Whiskey.png">
+              <span class="playlist-num">1</span>
+              <div class="playlist-info">
+                <div class="playlist-title">Sip a Little Whiskey</div>
+                <div class="playlist-artist">John Simpson</div>
+              </div>
+              <span class="playlist-duration">4:56</span>
+            </div>
+
+            <div class="playlist-item"
+              data-src="audio/Friday Night at Brink's.mp3"
+              data-title="Friday Night at Brink's"
+              data-artist="John Simpson"
+              data-thumb="">
+              <span class="playlist-num">2</span>
+              <div class="playlist-info">
+                <div class="playlist-title">Friday Night at Brink's</div>
+                <div class="playlist-artist">John Simpson</div>
+              </div>
+              <span class="playlist-duration">3:31</span>
+            </div>
+
+            <div class="playlist-item"
+              data-src="audio/Where Did The Time Go.mp3"
+              data-title="Where Did The Time Go"
+              data-artist="John Simpson"
+              data-thumb="">
+              <span class="playlist-num">3</span>
+              <div class="playlist-info">
+                <div class="playlist-title">Where Did The Time Go</div>
+                <div class="playlist-artist">John Simpson</div>
+              </div>
+              <span class="playlist-duration">5:27</span>
+            </div>
+
+            <div class="playlist-item"
+              data-src="audio/Mi Esposa Y Familia.mp3"
+              data-title="Mi Esposa Y Familia"
+              data-artist="John Simpson"
+              data-thumb="">
+              <span class="playlist-num">4</span>
+              <div class="playlist-info">
+                <div class="playlist-title">Mi Esposa Y Familia</div>
+                <div class="playlist-artist">John Simpson</div>
+              </div>
+              <span class="playlist-duration">2:51</span>
+            </div>
+
+            <div class="playlist-item"
+              data-src="audio/Tequila Tonight.mp3"
+              data-title="Tequila Tonight.mp3"
+              data-artist="John Simpson"
+              data-thumb="">
+              <span class="playlist-num">5</span>
+              <div class="playlist-info">
+                <div class="playlist-title">Tequila Tonight.mp3</div>
+                <div class="playlist-artist">John Simpson</div>
+              </div>
+              <span class="playlist-duration">3:46</span>
+            </div>
+
+          </div><!-- /playlist -->
+        </div><!-- /player-layout -->
+
+        <audio id="player-audio"></audio>
+      </div><!-- /media-player -->
+
+    </div>
+  </section>
+
+  <!-- BOOKING CTA -->
+  <section class="section" id="booking">
+    <div class="container">
+      <div class="resume-cta-block reveal" style="border-color:rgba(245,158,11,0.4);text-align:center;flex-direction:column;align-items:center;">
+        <div class="cta-text" style="text-align:center;">
+          <h3 style="font-size:2.8rem;"><i class="fas fa-calendar-check" style="color:#f59e0b;margin-right:.8rem;"></i>Book John for Your Event</h3>
+          <p>Available for weddings, private events, bar nights, and festivals across the Illinois region. Reach out below to check availability and discuss your event needs.</p>
+        </div>
+        <div style="display:flex;gap:var(--space-md);flex-wrap:wrap;justify-content:center;">
+          <a href="#contact" class="btn btn-gold"><i class="fas fa-envelope"></i> Contact for Booking</a>
+          <a href="tel:+13092193875" class="btn btn-outline" style="border-color:rgba(245,158,11,0.5);color:#f59e0b;"><i class="fas fa-phone"></i> +1 (309) 219-3875</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact-section section" id="contact">
+    <div class="container">
+      <h2 class="section-title reveal">Get In <span class="highlight">Touch</span></h2>
+      <div class="contact-grid">
+        <div class="contact-info-block reveal-left">
+          <h3>Book an Event</h3>
+          <p style="color:var(--text-secondary);font-size:1.5rem;margin-bottom:var(--space-lg);">Reach out to check availability, discuss your event, and get a quote.</p>
+          <div class="contact-info-item">
+            <div class="contact-info-icon" style="background:rgba(245,158,11,0.1);color:#f59e0b;border-color:rgba(245,158,11,0.2);"><i class="fas fa-envelope"></i></div>
+            <div class="contact-info-text"><h4>Email</h4><a href="mailto:john.simpson73@hotmail.com">john.simpson73@hotmail.com</a></div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-info-icon" style="background:rgba(245,158,11,0.1);color:#f59e0b;border-color:rgba(245,158,11,0.2);"><i class="fas fa-phone"></i></div>
+            <div class="contact-info-text"><h4>Phone</h4><a href="tel:+13092193875">+1 (309) 219-3875</a></div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-info-icon" style="background:rgba(245,158,11,0.1);color:#f59e0b;border-color:rgba(245,158,11,0.2);"><i class="fas fa-map-marker-alt"></i></div>
+            <div class="contact-info-text"><h4>Service Area</h4><p>Sterling, Rock Falls, Dixon, Morrison, Rockford & surrounding IL areas</p></div>
+          </div>
+        </div>
+        <div class="contact-form-block reveal-right">
+          <form id="contact-form" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="cf-name">Name</label>
+                <input type="text" id="cf-name" class="form-control" placeholder="Your Name">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="cf-email">Email</label>
+                <input type="email" id="cf-email" class="form-control" placeholder="you@example.com">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="cf-subject">Event Type / Subject</label>
+              <input type="text" id="cf-subject" class="form-control" placeholder="e.g., Wedding DJ for August 2025">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="cf-message">Event Details</label>
+              <textarea id="cf-message" class="form-control" placeholder="Date, location, number of guests, special requests..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-gold form-submit"><i class="fas fa-paper-plane"></i> Send Inquiry</button>
+            <div class="form-message"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo"><span class="logo-dot"></span>John <span>Simpson</span></a>
+          <p>Singer. DJ. KJ. Bringing energy to every stage.</p>
+          <div class="social-row" style="margin-top:var(--space-md);">
+            <a href="https://github.com/jsimpson73" target="_blank" class="social-btn"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/john-simpson-25aa7271/" target="_blank" class="social-btn"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Specialties</h4>
+          <nav class="footer-links">
+            <a href="background.html"><i class="fas fa-chevron-right"></i> Background</a>
+            <a href="entertainer.html"><i class="fas fa-chevron-right"></i> Entertainer</a>
+            <a href="webdev.html"><i class="fas fa-chevron-right"></i> Web Developer</a>
+            <a href="softwaredev.html"><i class="fas fa-chevron-right"></i> Software Dev</a>
+            <a href="qa.html"><i class="fas fa-chevron-right"></i> Quality Assurance</a>
+          </nav>
+        </div>
+        <div class="footer-col">
+          <h4>This Page</h4>
+          <nav class="footer-links">
+            <a href="#intro"><i class="fas fa-chevron-right"></i> About the Act</a>
+            <a href="#schedule"><i class="fas fa-chevron-right"></i> Schedule</a>
+            <a href="#gallery"><i class="fas fa-chevron-right"></i> Gallery</a>
+            <a href="#music"><i class="fas fa-chevron-right"></i> Music Player</a>
+            <a href="#booking"><i class="fas fa-chevron-right"></i> Book an Event</a>
+          </nav>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <nav class="footer-links">
+            <a href="mailto:john.simpson73@hotmail.com"><i class="fas fa-envelope"></i> Email</a>
+            <a href="tel:+13092193875"><i class="fas fa-phone"></i> Phone</a>
+          </nav>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="copyright">&copy; 2025 John Simpson. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+  <script src="js/main.js"></script>
+  <script src="js/entertainer.js"></script>
+</body>
+</html>
